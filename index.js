@@ -1,6 +1,9 @@
 // Node.js is an asynchronous event-driven JavaScript runtime
 // Node.js uses the V8 JavaScript engine from Google Chrome
 
+// $ npm init -y  // create package.json file
+// $ npm install express
+
 console.log('Hello World!');
 
 // global is a global object in Node.js
