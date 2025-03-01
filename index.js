@@ -3,14 +3,30 @@
 
 // $ npm init -y  // create package.json file
 // $ npm install express
+import express from 'express';
+const app = express();
+const PORT = 3000;
+import { readFile } from 'fs';
 
-console.log('Hello World!');
+app.get('/', (request, response) => {
+    // read the home.html file
+    readFile('home.html', 'utf8', (err, html) => {
+        if (err) {
+            response.status(500).send('Sorry, we cannot find that file!');
+        }
+        response.send(html);
+    });
+});
 
-// global is a global object in Node.js
-global.my_num = 5;
-console.log('global.my_num', global.my_num);
 
-console.log('process.platform', process.platform);
+
+
+app.listen(PORT, () => {
+    console.log('Server is running on http://localhost:' + PORT);
+});
+
+
+
 
 
 process.on('exit', function() {
