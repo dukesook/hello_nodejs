@@ -8,3 +8,7 @@ console.log('client.mjs loaded');
 //************************************************* */
 const socket = io(); // Connect to WebSocket server
 //************************************************* */
+
+socket.on('welcome', (data) => {
+  console.log('Server says:', data);
+})

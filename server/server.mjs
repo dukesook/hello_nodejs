@@ -10,8 +10,12 @@ const io = new Server(httpServer, {/* options */});
 
 
 
-io.on('connection', function(socket) {
-    console.log('a user connected');
+io.on('connection', (socket) => {
+    // socket represents the connection to the client
+    console.log('A user connected with ID:', socket.id);
+    const event = 'welcome';
+    const data = 'Welcome to the server!';
+    socket.emit(event, data);
 });
 
 
