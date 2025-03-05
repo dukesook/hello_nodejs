@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "chat room",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dukesook/hello_nodejs.git"
+  },
+  "author": "dukesook",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dukesook/hello_nodejs/issues"
+  },
+  "homepage": "https://github.com/dukesook/hello_nodejs#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
