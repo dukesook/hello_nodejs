@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "description": "chat room",
-  "main": "index.mjs",
+  "main": "server.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/dukesook/hello_nodejs#readme",
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
   }
 }

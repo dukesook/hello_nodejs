@@ -1,0 +1,30 @@
+// $ npm init -y  // create package.json file
+import express from 'express'; // $ npm install express
+import { createServer } from 'http';
+import { Server } from "socket.io" // $ npm install socket.io
+
+const PORT = 3000;
+const app = express();
+const httpServer = createServer(app);
+const io = new Server(httpServer, {/* options */});
+
+
+
+io.on('connection', function(socket) {
+    console.log('a user connected');
+});
+
+
+// Serve static files in Express
+import path from 'path';
+app.use(express.static(path.join(process.cwd(), '../public')));
+
+httpServer.listen(PORT, () => {
+    console.log('Server is running on http://localhost:' + PORT);
+});
+
+
+
+
+// Express handles HTTP requests/responses. It creates a server.
+// Socket.io handles real-time bidirectional communication.
