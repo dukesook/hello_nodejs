@@ -16,6 +16,15 @@ io.on('connection', (socket) => {
     const event = 'welcome';
     const data = 'Welcome to the server!';
     socket.emit(event, data);
+
+    socket.on('hello', (data) => {
+        console.log('Client says:', data);
+    });
+
+    socket.on('submit', (data) => {
+        console.log('Client submitted:', data);
+        io.emit('server-message', data);
+    });
 });
 
 
