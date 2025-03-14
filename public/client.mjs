@@ -30,3 +30,7 @@ socket.on('server-message', (data) => {
   htmlMessages.innerHTML += `<p>${data}</p>`;
 })
 
+document.getElementById('sendArrayButton').onclick = () => {
+  const array = [100, 200, 300, 400, 500];
+  socket.emit('sendArray', array);
+}

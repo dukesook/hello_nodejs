@@ -25,6 +25,11 @@ io.on('connection', (socket) => {
         console.log('Client submitted:', data);
         io.emit('server-message', data);
     });
+
+    socket.on('sendArray', (data) => {
+        console.log('Client sent array:', data);
+        console.log('instanceof Array:', data instanceof Array);
+    });
 });
 
 
